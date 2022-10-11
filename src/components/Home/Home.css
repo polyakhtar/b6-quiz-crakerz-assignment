@@ -1,0 +1,10 @@
+.background-image-container{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnVKVozgfUWrMdk6Aez-5rI0-1MVlEcsMuUg&usqp=CAU");
+    position:fixed;
+    min-width:100%;
+    min-width:100%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
