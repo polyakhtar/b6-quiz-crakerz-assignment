@@ -1,10 +1,13 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 import './Home.css'
 
 
 const Home = () => {
+    const quiz=useLoaderData();
+    console.log(quiz.data[0].name);
     return (
-        <div>
+        <div>           
             <div className='background-image-container'>
                <div className='text-white m-40 p-8'>
                <h1 className='text-4xl font-bold mb-4'>ARE YOU WANT TO CHECK YOUR SKILL?</h1>
@@ -15,8 +18,14 @@ const Home = () => {
                 </div>
                </div>
             </div>
+            <div>
+                <h1>quiz:{quiz.data.name}</h1>
+            </div>
         </div>
         
+            
+        
+                
         
     );
 };
