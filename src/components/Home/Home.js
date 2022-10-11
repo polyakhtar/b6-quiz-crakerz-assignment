@@ -1,15 +1,16 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import QuizCart from '../QuizCart/QuizCart';
 import './Home.css'
 
-
 const Home = () => {
-    const quiz=useLoaderData();
-    console.log(quiz.data[0].name);
+    const quizes=useLoaderData().data;
+    console.log(quizes);
     return (
-        <div>           
-            <div className='background-image-container'>
-               <div className='text-white m-40 p-8'>
+    <div>
+           
+           <div className='background-image-container'>
+               <div className='text-white p-40'>
                <h1 className='text-4xl font-bold mb-4'>ARE YOU WANT TO CHECK YOUR SKILL?</h1>
                <div className='mt-4'>
                <p>This is the platform by which you will test your skill and develop your skill.</p>
@@ -18,14 +19,19 @@ const Home = () => {
                 </div>
                </div>
             </div>
-            <div>
-                <h1>quiz:{quiz.data.name}</h1>
-            </div>
+                    
+        <div className='grid lg:grid-cols-4'>
+{
+    quizes.map(quizcart=><QuizCart
+    key={quizcart.id}
+    quizcart={quizcart}
+    ></QuizCart>)
+}
+
         </div>
         
-            
         
-                
+        </div>                 
         
     );
 };
