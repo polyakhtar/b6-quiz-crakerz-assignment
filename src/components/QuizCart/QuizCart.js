@@ -1,7 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './QuizCart.css';
+
 
 const QuizCart = ({quizcart}) => {
-    const {name,logo,total}=quizcart;
+    const {name,logo,total,id}=quizcart;
     return (
         
             
@@ -11,8 +14,8 @@ const QuizCart = ({quizcart}) => {
             </div>
             <div className='m-2'>
             <h2 className='text-2xl'>{name}</h2>
-            <h2>Total Quiz : {total}</h2>
-            <button className='text-2xl bg-blue-500 rounded-md px-3 py-2 mt-2 font-semibold'>Start Quiz</button>
+            <h2 className='mb-4'>Total Quiz : {total}</h2>
+            <Link className='quiz-button' to={`/quizcart/${id}`}>Start Quiz</Link>
 
             </div>
         </div>

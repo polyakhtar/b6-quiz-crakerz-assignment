@@ -5,13 +5,13 @@ import './Home.css'
 
 const Home = () => {
     const quizes=useLoaderData().data;
-    console.log(quizes);
+    
     return (
     <div>
            
            <div className='background-image-container'>
                <div className='text-white p-40'>
-               <h1 className='text-4xl font-bold mb-4'>ARE YOU WANT TO CHECK YOUR SKILL?</h1>
+               <h1 className='text-4xl font-bold mb-4'>ARE YOU WANT TO CHECK YOUR SKILL ?</h1>
                <div className='mt-4'>
                <p>This is the platform by which you will test your skill and develop your skill.</p>
                <p>
